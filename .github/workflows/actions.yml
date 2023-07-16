@@ -2,7 +2,8 @@ name: run script
 
 on:
     schedule:
-        - cron: "55 8,16 * * *" #at 2.25pm and 10.25pm in IST
+        - cron: "29 16 * * *" #at 2.25pm and 10.25pm in IST
+        # - cron: "55 8,16 * * *" #at 2.25pm and 10.25pm in IST
 
 jobs:
     build:
@@ -29,4 +30,6 @@ jobs:
                   receiver_1: ${{ secrets.receiver_1 }}
                   receiver_2_name: ${{ secrets.receiver_2_name }}
                   receiver_2: ${{ secrets.receiver_2 }}
+                  rapid_api_key_1: ${{ secrets.rapid_api_key_1 }}
+                  rapid_api_key_2: ${{ secrets.rapid_api_key_2 }}
               run: python main.py
