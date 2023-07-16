@@ -2,8 +2,8 @@ name: run script
 
 on:
     schedule:
-        - cron: "31 16 * * *" #at 2.25pm and 10.25pm in IST
-        # - cron: "55 8,16 * * *" #at 2.25pm and 10.25pm in IST
+        - cron: "50 8,16 * * *" # at 2.25pm and 10.25pm in IST
+        # - cron: "31 16 * * *" # for testing
 
 jobs:
     build:
