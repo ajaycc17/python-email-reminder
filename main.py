@@ -95,17 +95,17 @@ if __name__ == "__main__":
         + "\n\nTake care! 😊\n",
         os.environ["receiver_1"],
     )
-    email_alert(
-        chosen_subject,
-        salutation
-        + " "
-        + os.environ["receiver_2_name"]
-        + "! ✨\n"
-        + chosen_header
-        + "\n\n"
-        + topic
-        + ": "
-        + body
-        + "\n\nTake care! 😊\n",
-        os.environ["receiver_2"],
-    )
+    # email_alert(
+    #     chosen_subject,
+    #     salutation
+    #     + " "
+    #     + os.environ["receiver_2_name"]
+    #     + "! ✨\n"
+    #     + chosen_header
+    #     + "\n\n"
+    #     + topic
+    #     + ": "
+    #     + body
+    #     + "\n\nTake care! 😊\n",
+    #     os.environ["receiver_2"],
+    # )

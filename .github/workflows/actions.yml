@@ -2,7 +2,7 @@ name: run script
 
 on:
     schedule:
-        - cron: "29 16 * * *" #at 2.25pm and 10.25pm in IST
+        - cron: "31 16 * * *" #at 2.25pm and 10.25pm in IST
         # - cron: "55 8,16 * * *" #at 2.25pm and 10.25pm in IST
 
 jobs:
