@@ -15,7 +15,7 @@ def fetch_facts():
         "X-RapidAPI-Host": "facts-by-api-ninjas.p.rapidapi.com",
     }
     response = requests.request("GET", url, headers=headers)
-    topic = "Curious facts"
+    topic = "Random facts"
     return topic, response.json()[0]["fact"]
 
 
@@ -27,7 +27,7 @@ def fetch_jokes():
         "X-RapidAPI-Host": "jokes-by-api-ninjas.p.rapidapi.com",
     }
     response = requests.request("GET", url, headers=headers)
-    topic = "Smile please"
+    topic = "Random Joke"
     return topic, response.json()[0]["joke"]
 
 
@@ -35,7 +35,7 @@ def fetch_jokes():
 def fetch_jokes2():
     url = "https://official-joke-api.appspot.com/random_joke"
     response = requests.request("GET", url)
-    topic = "Maybe a reason to laugh"
+    topic = "Random Joke"
     return topic, response.json()["setup"] + "\n" + response.json()["punchline"]
 
 
@@ -55,7 +55,7 @@ def fetch_dadjoke():
 def cat_fact():
     url = "https://catfact.ninja/fact"
     cat = requests.request("GET", url)
-    topic = "Fact about a ninja cat"
+    topic = "Cat facts"
     return topic, cat.json()["fact"]
 
 
@@ -68,7 +68,7 @@ def chuck_norris():
         "X-RapidAPI-Host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
     }
     response = requests.get(url, headers=headers)
-    topic = "Chuck Norris says"
+    topic = "Chuck Norris Jokes"
     return topic, response.json()["value"]
 
 
@@ -76,7 +76,7 @@ def chuck_norris():
 def open_trivia():
     url = "https://opentdb.com/api.php?amount=1"
     response = requests.get(url)
-    topic = "Knowledge check"
+    topic = "Open trivia"
     return topic, html.unescape(
         response.json()["results"][0]["question"]
     ) + "\nAnswer: " + html.unescape(response.json()["results"][0]["correct_answer"])
@@ -88,7 +88,7 @@ def date_facts():
     currentMonth = datetime.now().month
     url = f"http://numbersapi.com/{currentMonth}/{currentDay}/date"
     response = requests.get(url)
-    topic = "Today is a special day"
+    topic = "Facts about today"
     return topic, response.text
 
 
@@ -96,5 +96,5 @@ def date_facts():
 def random_date_facts():
     url = "http://numbersapi.com/random/date"
     response = requests.get(url)
-    topic = "Any random day is a special day"
+    topic = "Random days"
     return topic, response.text

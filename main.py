@@ -41,12 +41,7 @@ def email_alert(subject, body, to):
 # main code
 if __name__ == "__main__":
     # choose a subject
-    subjects = [
-        "Knock! Knock! Did you forget something?🤔",
-        "Forgot about it? Got your back!😊",
-        "No, not letting you miss your meds!🌷",
-        "An apple a day keeps...regular medicine does that too!✌️",
-    ]
+    subjects = ["Gentle reminder for medicines💊", "A reminder to take medicines"]
     chosen_subject = random.choice(subjects)
 
     # chose a salutation depending on time
@@ -60,10 +55,8 @@ if __name__ == "__main__":
 
     # chose the email header
     header = [
-        "Did you forget about your meds?? Take it with a pinch of smile😊.",
-        "Happy to remind you about your meds😊.",
-        "Please don't forget to take your 💊 on time.",
-        "It might be a tiring day! Relax for a moment😊 and yeah...do not miss the medicine.",
+        "Did you forget about your medicines??.",
+        "Happy to remind you about your medicines.",
     ]
     chosen_header = random.choice(header)
 
